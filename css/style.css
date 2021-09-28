@@ -1,0 +1,470 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,100;1,400;1,700&display=swap");
+.areas .areas-container .areas-list .area-card, .areas .areas-container .areas-list .area-card .card--title, .areas .areas-container .areas-list .area-card img {
+  width: 100%;
+  margin: 16px  0 0 0;
+}
+
+.about .about-data--container h2, .areas .areas-container h2 {
+  color: #294165;
+}
+
+.about .about-data--container h2:after, .areas .areas-container h2:after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  display: inline-block;
+  background: #294165;
+}
+
+.about .about-data--container .about-data--texts p, .areas .areas-container .areas-list .area-card .card--title, .areas .areas-container .areas-list .area-card .card-text {
+  margin: 8px 0;
+  font-family: "Lato", sans-serif;
+  font-size: .8rem;
+  color: #294165;
+}
+
+.header-bg, .header-bg .barra .menu, .areas .areas-container .areas-list .area-card .card--title .presidencia, .areas .areas-container .areas-list .area-card .card--title .consejo, .areas .areas-container .areas-list .area-card .card--title .ri,
+.areas .areas-container .areas-list .area-card .card--title .rh, .areas .areas-container .areas-list .area-card .card--title .proyectos, .areas .areas-container .areas-list .area-card .card--title .finanzas, .areas .areas-container .areas-list .area-card .card--title .marketing, footer .location .location-icon, footer .location .phone-icon, footer .phone .location-icon, footer .phone .phone-icon, footer .footer-rrss--container .ig, footer .footer-rrss--container .fb, footer .footer-rrss--container .in {
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.about, .areas, .areas .areas-container .areas-list, .areas .areas-container .areas-list .area-card, footer {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.header-bg:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, rgba(41, 65, 101, 0.583)), color-stop(80%, rgba(41, 65, 101, 0.57)), to(rgba(41, 65, 101, 0.323)));
+  background: linear-gradient(180deg, rgba(41, 65, 101, 0.583) 70%, rgba(41, 65, 101, 0.57) 80%, rgba(41, 65, 101, 0.323) 100%);
+}
+
+.header-bg .header .btn {
+  position: absolute;
+  width: 160px;
+  min-width: 160px;
+  max-width: 200px;
+  border-radius: 4px;
+  text-align: center;
+  background: #763626;
+  padding: 8px;
+  -webkit-box-shadow: 0px 10px 21px -11px #211D1C;
+          box-shadow: 0px 10px 21px -11px #211D1C;
+}
+
+.header-bg .header .btn a {
+  text-decoration: none;
+  color: #f0f0f0;
+  letter-spacing: 3px;
+}
+
+.header-bg .header .header--text, footer .location, footer .phone {
+  color: #f0f0f0;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 16px;
+  letter-spacing: 3px;
+}
+
+footer .footer-rrss--container .ig, footer .footer-rrss--container .fb, footer .footer-rrss--container .in {
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-size: 60.5%;
+  font-family: "Lato", sans-serif;
+}
+
+nav {
+  position: absolute;
+  width: 80%;
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #294165;
+  color: #f0f0f0;
+  opacity: 0;
+  display: none;
+  z-index: 3;
+}
+
+nav .close-btn-container .close {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 6%;
+  left: calc(100% - 90%);
+  bottom: 0;
+  right: 0;
+  display: inline-block;
+  background-image: url("/images/cancel.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 1;
+  cursor: pointer;
+}
+
+nav ul {
+  width: 80%;
+  margin-top: 60px;
+}
+
+nav ul li {
+  font-size: 1.8rem;
+  font-weight: lighter;
+  margin: 10%;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #f0f0f0;
+}
+
+nav ul li .ig {
+  width: 16px;
+  height: 16px;
+  margin: 0 6px;
+  display: inline-block;
+  background-image: url(/images/instagram.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+nav ul li .facebook {
+  width: 16px;
+  height: 16px;
+  margin: 0 6px;
+  display: inline-block;
+  background-image: url(/images/facebook.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+nav ul li .whatsapp {
+  width: 16px;
+  height: 16px;
+  margin: 0 6px;
+  display: inline-block;
+  background-image: url(/images/whatsapp.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+nav ul li:nth-child(5) {
+  margin-bottom: 50px;
+}
+
+nav ul .ig-text, nav ul .fb-text, nav ul .w-text {
+  font-size: .8rem;
+}
+
+.header-bg {
+  width: 100vw;
+  height: 360px;
+  background-image: url("/images/bg-header.png");
+  background-size: cover;
+  z-index: 1;
+}
+
+.header-bg .barra {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background: transparent;
+  z-index: 2;
+}
+
+.header-bg .barra img {
+  width: 160px;
+  margin: 20px 50px 0 0;
+}
+
+.header-bg .barra .menu {
+  width: 16px;
+  height: 16px;
+  margin: 16px 20px  0 0;
+  background-image: url("/images/menu.svg");
+  background-size: contain;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.header-bg .header {
+  position: absolute;
+  top: 6.6rem;
+  left: calc(50% - 40%);
+  width: 80%;
+  min-width: 80%;
+  max-width: 200px;
+  z-index: 2;
+}
+
+.header-bg .header h1 {
+  margin-bottom: 16px;
+  color: #f0f0f0;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 20px;
+  letter-spacing: 3px;
+  text-align: left;
+}
+
+.header-bg .header .header--text {
+  text-align: left;
+}
+
+.header-bg .header .header--text .junior {
+  position: relative;
+  background-color: #763626;
+  cursor: pointer;
+}
+
+.header-bg .header .header--text .junior a {
+  text-decoration: none;
+  color: #f0f0f0;
+}
+
+.header-bg .header .header--text ::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 20%;
+  height: auto;
+  background-color: #763626;
+}
+
+.header-bg .header .btn {
+  top: 240px;
+  left: calc(50% - 80px);
+  right: 0;
+}
+
+.header-bg:after {
+  height: 360px;
+  z-index: 1;
+}
+
+.about {
+  width: 100%;
+  height: auto;
+}
+
+.about .about-data--container {
+  margin: 60px 50px;
+}
+
+.about .about-data--container .about-data--texts {
+  margin-top: 20px;
+}
+
+.about .about-data--container .uncuyo {
+  width: 200px;
+  margin: 8px 0;
+}
+
+.about .about-image {
+  width: 90%;
+  border-radius: 4px;
+}
+
+.about .mision {
+  width: 200px;
+  margin: 40px 0;
+}
+
+.areas {
+  width: 100%;
+  height: auto;
+}
+
+.areas .areas-container {
+  margin: 0 50px 0 50px;
+}
+
+.areas .areas-container .areas-list {
+  width: 100%;
+  height: auto;
+  margin: 40px 0 0 0;
+  background: #90AFC54D;
+}
+
+.areas .areas-container .areas-list .area-card {
+  height: auto;
+  padding: 16px 0;
+}
+
+.areas .areas-container .areas-list .area-card .card--title {
+  text-align: center;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.areas .areas-container .areas-list .area-card .card--title .presidencia, .areas .areas-container .areas-list .area-card .card--title .consejo, .areas .areas-container .areas-list .area-card .card--title .ri,
+.areas .areas-container .areas-list .area-card .card--title .rh, .areas .areas-container .areas-list .area-card .card--title .proyectos, .areas .areas-container .areas-list .area-card .card--title .finanzas, .areas .areas-container .areas-list .area-card .card--title .marketing {
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+}
+
+.areas .areas-container .areas-list .area-card .card--title .presidencia {
+  background-image: url("/images/presidencia-icon.svg");
+}
+
+.areas .areas-container .areas-list .area-card .card--title .consejo {
+  background-image: url("/images/consejo-icon.svg");
+}
+
+.areas .areas-container .areas-list .area-card .card--title .ri {
+  background-image: url("/images/ri-icon.svg");
+}
+
+.areas .areas-container .areas-list .area-card .card--title .rh {
+  background-image: url("/images/rh-icon.svg");
+}
+
+.areas .areas-container .areas-list .area-card .card--title .proyectos {
+  background-image: url("/images/proyectos-icon.svg");
+}
+
+.areas .areas-container .areas-list .area-card .card--title .finanzas {
+  background-image: url("/images/finanzas-icon.svg");
+}
+
+.areas .areas-container .areas-list .area-card .card--title .marketing {
+  background-image: url("/images/marketing-icon.svg");
+}
+
+.areas .areas-container .areas-list .area-card .card-text {
+  width: 90%;
+  margin: 16px 0 0 0;
+  text-align: center;
+}
+
+.areas .areas-container .areas-list .area-card img {
+  height: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+footer {
+  width: 100%;
+  height: auto;
+  background-color: #294165;
+}
+
+footer img {
+  width: 200px;
+  margin: 40px 0;
+}
+
+footer .footer-line {
+  width: 100%;
+  height: 1px;
+  border: none;
+  background-color: #f0f0f0;
+}
+
+footer .location, footer .phone {
+  margin: 16px 0;
+  text-align: center;
+}
+
+footer .location .location-icon, footer .location .phone-icon, footer .phone .location-icon, footer .phone .phone-icon {
+  width: 20px;
+  height: 20px;
+  margin: 8px  0;
+  background-size: contain;
+}
+
+footer .location .location-icon, footer .phone .location-icon {
+  background-image: url("/images/location-icon.svg");
+}
+
+footer .location .phone-icon, footer .phone .phone-icon {
+  background-image: url("/images/phone-footer.svg");
+}
+
+footer .footer-rrss--container {
+  width: 100%;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .footer-rrss--container .ig, footer .footer-rrss--container .fb, footer .footer-rrss--container .in {
+  width: 20px;
+  height: 20px;
+  margin: 0 16px;
+  cursor: pointer;
+  background-size: contain;
+}
+
+footer .footer-rrss--container .ig {
+  background-image: url("/images/ig-footer.svg");
+}
+
+footer .footer-rrss--container .fb {
+  background-image: url("/images/fb-footer.svg");
+}
+
+footer .footer-rrss--container .in {
+  background-image: url("/images/in-footer.svg");
+}
+
+footer .footer-rrss--container .ig:hover, footer .footer-rrss--container .fb:hover, footer .footer-rrss--container .in:hover, footer .footer-rrss--container .ig:focus, footer .footer-rrss--container .fb:focus, footer .footer-rrss--container .in:focus,
+footer .footer-rrss--container .ig:active, footer .footer-rrss--container .fb:active, footer .footer-rrss--container .in:active {
+  width: 26px;
+  height: 100px;
+  background-color: #763626;
+}
+/*# sourceMappingURL=style.css.map */

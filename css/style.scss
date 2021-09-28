@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,100;1,400;1,700&display=swap');
+
+$azulPrincipal:#294165;
+$azulPrinc-Opacidad: rgba(41, 65, 101, 0.51);
+$rojo: #763626;
+$colorTexto: #7F8897;
+$celeste: #DEE7EE;
+$bg-area-celeste: #90AFC54D;
+$blanco: #f0f0f0;
+
+$fuente: 'Lato', sans-serif;
+
+%space-allwidth{
+    width: 100%;
+    margin: 16px  0 0 0;
+}
+%title-section{
+    h2{
+        color: $azulPrincipal;
+    }
+    h2:after{
+        content: '';
+        width: 100%;
+        height: 2px;
+        display: inline-block;
+        background: $azulPrincipal;
+    }
+}
+%min-text{
+    margin: 8px 0;
+    font-family: $fuente;
+    font-size: .8rem;
+    color: $azulPrincipal;
+}
+%bg-config{
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+%grid-center{
+    display: grid;
+    place-items: center;
+}
+%linear-blue-gradient-filter{
+    content: '';
+    position: absolute;
+    width: 100%;
+    background: linear-gradient(
+        180deg, rgba(41, 65, 101, 0.583) 
+        70%, rgba(41, 65, 101, 0.57) 
+        80%, rgba(41, 65, 101, 0.323) 
+        100%);
+}
+%cta{
+    position: absolute;
+    width: 160px;
+    min-width: 160px;
+    max-width: 200px;
+    border-radius: 4px;
+    text-align: center;
+    background: $rojo;
+    padding: 8px;
+    box-shadow: 0px 10px 21px -11px #211D1C;
+    a{
+        text-decoration: none;
+        color: $blanco;
+        letter-spacing: 3px;
+    }
+}
+%main-text{
+    color: $blanco;
+    font-family: $fuente;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 16px;
+    letter-spacing: 3px;
+}
+%hover-transition{
+    transition: .3s linear;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+body{
+    font-size: 60.5%;
+    font-family: $fuente;
+}
+// menu activo
+nav{
+    position: absolute;
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    background:$azulPrincipal;
+    color: $blanco ;
+    opacity: 0;
+    display: none;
+    z-index: 3;
+    .close-btn-container{
+        .close{
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            top: 6%;
+            left:calc(100% - 90%);
+            bottom: 0;
+            right: 0;
+            display: inline-block;
+            background-image: url('/images/cancel.svg');
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 1;
+            cursor: pointer;
+        }
+    }
+
+    ul{
+        width: 80%;
+        margin-top: 60px;
+        li{
+            font-size: 1.8rem;
+            font-weight: lighter;
+            margin: 10%;
+            list-style: none;
+            a{
+                text-decoration: none;
+                color: $blanco;
+            }
+            .ig{
+                width: 16px;
+                height: 16px;
+                margin: 0 6px;
+                display: inline-block;
+                background-image: url(/images/instagram.svg);
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            .facebook{
+                width: 16px;
+                height: 16px;
+                margin: 0 6px;
+                display: inline-block;
+                background-image: url(/images/facebook.svg);
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            .whatsapp{
+                width: 16px;
+                height: 16px;
+                margin: 0 6px;
+                display: inline-block;
+                background-image: url(/images/whatsapp.svg);
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                
+            }
+        }
+        li:nth-child(5){
+            margin-bottom: 50px;
+        }
+        .ig-text, .fb-text, .w-text{
+            font-size: .8rem;
+
+        }
+    }
+}
+// header
+.header-bg{
+    width: 100vw;
+    height: 360px;
+    @extend %bg-config;
+    background-image: url('/images/bg-header.png');
+    background-size: cover;
+    z-index: 1;
+    .barra{
+        position: absolute;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background: transparent;
+        z-index: 2;
+        img{
+            width: 160px;
+            margin: 20px 50px 0 0;
+        }
+        .menu{
+            width: 16px;
+            height: 16px;
+            margin: 16px 20px  0 0;
+            @extend %bg-config;
+            background-image: url('/images/menu.svg');
+            background-size: contain;
+            opacity: 1;
+            cursor: pointer;
+        }
+    }
+    .header{
+        position: absolute;
+        top: 6.6rem;
+        left: calc(50% - 40%);
+        width: 80%;
+        min-width: 80%;
+        max-width: 200px;
+        z-index: 2;
+        h1{
+            margin-bottom: 16px;
+            color: $blanco;
+            font-family: $fuente;
+            font-weight: 400;
+            font-size: 1rem;
+            font-style: italic;
+            line-height: 20px;
+            letter-spacing: 3px;
+            text-align:left;
+        }
+        .header--text{
+            text-align:left;
+            @extend %main-text;
+            .junior{
+                position: relative;
+                background-color: $rojo;
+                cursor: pointer;
+                
+                a{
+                    text-decoration: none;
+                    color: $blanco;
+                }
+            }
+            ::after{
+                content: '';
+                display: inline-block;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 20%;
+                height: auto;
+                background-color: $rojo;
+            }
+        }
+        .btn{
+            @extend %cta;
+            top:240px;
+            left: calc(50% - 80px);
+            right: 0;
+        }
+    }
+}
+.header-bg:after{
+    @extend %linear-blue-gradient-filter;
+    height: 360px;
+    z-index: 1;
+}
+// sobre nosotros
+.about{
+    width: 100%;
+    height: auto;
+    @extend %grid-center;
+    .about-data--container{
+        margin: 60px 50px;
+        @extend %title-section;
+        .about-data--texts{
+            margin-top: 20px;
+            p{
+                @extend %min-text;
+            }
+        }
+        .uncuyo{
+            width: 200px;
+            margin: 8px 0;
+        }
+    }
+    .about-image{
+        width: 90%;
+        border-radius: 4px;
+    }
+    .mision{
+        width: 200px;
+        margin:  40px 0;
+    }
+}
+// areas
+.areas{
+    width: 100%;
+    height: auto;
+    @extend %grid-center;
+    .areas-container{
+        margin: 0 50px 0 50px;
+        @extend %title-section;
+        .areas-list{
+            width: 100%;
+            height: auto;
+            @extend %grid-center;
+            margin: 40px 0 0 0;
+            background: $bg-area-celeste;
+            .area-card{
+                @extend %space-allwidth;
+                height: auto;
+                padding: 16px 0;
+                @extend %grid-center;
+                .card--title{
+                    @extend %space-allwidth;
+                    text-align: center;
+                    @extend %min-text;
+                    font-weight: 900;
+                    text-transform: uppercase;
+                    .presidencia,  .consejo, .ri,
+                    .rh, .proyectos, .finanzas, .marketing{
+                        width: 40px;
+                        height: 40px;
+                        @extend %bg-config;
+                        background-size: contain;
+                    }
+                    .presidencia{
+                        background-image: url('/images/presidencia-icon.svg');
+                    }
+                    .consejo{
+                        background-image: url('/images/consejo-icon.svg');
+                    }
+                    .ri{
+                        background-image: url('/images/ri-icon.svg');
+                    }
+                    .rh{
+                        background-image: url('/images/rh-icon.svg');
+                    }
+                    .proyectos{
+                        background-image: url('/images/proyectos-icon.svg');
+                    }
+                    .finanzas{
+                        background-image: url('/images/finanzas-icon.svg');
+                    }
+                    .marketing{
+                        background-image: url('/images/marketing-icon.svg');
+                    }
+                }
+                .card-text{
+                    width: 90%;
+                    margin: 16px 0 0 0 ;
+                    text-align: center;
+                    @extend %min-text;
+                }
+                img{
+                    @extend %space-allwidth;
+                    height: 200px;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+}
+// footer
+footer{
+    width: 100%;
+    height: auto;
+    background-color: $azulPrincipal;
+    @extend %grid-center;
+    img{
+        width: 200px;
+        margin: 40px 0;
+    }
+    .footer-line{
+        width: 100%;
+        height: 1px;
+        border: none;
+        background-color: $blanco;
+    }
+    .location, .phone{
+        margin: 16px 0;
+        text-align:center;
+        @extend %main-text;
+        .location-icon, .phone-icon{
+            width: 20px;
+            height: 20px;
+            margin: 8px  0;
+            @extend %bg-config;
+            background-size: contain;
+        }
+        .location-icon{
+            background-image: url('/images/location-icon.svg');
+        }
+        .phone-icon{
+            background-image: url('/images/phone-footer.svg');
+        }
+    }
+    .footer-rrss--container{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        .ig, .fb, .in{
+            width: 20px;
+            height: 20px;
+            margin: 0 16px;
+            cursor: pointer;
+            @extend %bg-config;
+            background-size: contain;
+            @extend %hover-transition;
+        }
+        .ig{
+            background-image: url('/images/ig-footer.svg');
+        }
+        .fb{
+            background-image: url('/images/fb-footer.svg');
+        }
+        .in{
+            background-image: url('/images/in-footer.svg');
+        }
+        .ig:hover, .fb:hover, .in:hover, .ig:focus, .fb:focus, .in:focus,
+        .ig:active, .fb:active, .in:active{
+            width: 26px;
+            height: 100px;
+            background-color: $rojo;
+        }
+    }
+}
+
